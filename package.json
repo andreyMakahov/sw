@@ -1,0 +1,23 @@
+{
+  "name": "sw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/bluebird-global": "^3.5.11",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.3.3",
+    "uglifyjs-webpack-plugin": "^2.1.2",
+    "webpack": "^4.29.4",
+    "webpack-cli": "^3.2.3"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.3"
+  }
+}
