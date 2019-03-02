@@ -39,6 +39,7 @@ var ServiceWorker = /** @class */ (function () {
     ServiceWorker.prototype.onFetch = function (event) {
         var _this = this;
         var request = event.request;
+        this.logger.report("Request: " + request.url, Types.Info);
         event.respondWith(caches.match(request).then(function (response) {
             if (response) {
                 _this.logger.report('Found response in cache', Types.Info);

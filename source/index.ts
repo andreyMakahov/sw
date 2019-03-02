@@ -81,6 +81,7 @@ class ServiceWorker {
     @autobind
     onFetch(event: any): void {
         const request = event.request;
+        this.logger.report(`Request: ${request.url}`, Types.Info);
 
         event.respondWith(
             caches.match(request).then((response) => {
