@@ -1,4 +1,4 @@
-self.importScripts('dist/bundle.js');
+self.importScripts('../dist/bundle.js');
 
 if (SwToolbox) {
     var config = {
