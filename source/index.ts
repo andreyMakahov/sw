@@ -1,4 +1,5 @@
 import * as Promise from 'bluebird';
+import autobind from 'autobind-decorator';
 import Logger from './Logger/index';
 
 import {
@@ -55,6 +56,7 @@ class ServiceWorker {
         this.bindEventListeners();
     }
 
+    @autobind
     onInstall(event: any): void {
         event.waitUntil(
             caches.open(this.precacheName).then((cache) => {
@@ -63,6 +65,7 @@ class ServiceWorker {
         );
     }
 
+    @autobind
     onActivate(event: any): void {
         event.waitUntil(
             caches.keys().then((cacheNames) => {
@@ -75,6 +78,7 @@ class ServiceWorker {
         )
     }
 
+    @autobind
     onFetch(event: any): void {
         const request = event.request;
 

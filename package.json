@@ -18,6 +18,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/autobind-decorator": "^2.1.0",
+    "autobind-decorator": "^2.4.0",
     "bluebird": "^3.5.3"
   }
 }
