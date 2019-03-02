@@ -22,7 +22,8 @@ module.exports = (env, options) => {
             extensions: ['.ts', '.js']
         },
         output: {
-            library: ['SwToolbox'],
+            library: 'SwToolbox',
+            libraryExport: 'default',
             filename: 'bundle.js',
             path: path.resolve(__dirname, 'dist')
         },
